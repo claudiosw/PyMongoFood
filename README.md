@@ -29,3 +29,5 @@ venv\Scripts\activate
 pip install -r requirements.txt
 pre-commit install
 ```
+
+### Download [MongoDB](https://www.mongodb.com/try/download/community) and install
