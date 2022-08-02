@@ -19,7 +19,7 @@ class __DBConnectionHandler:
             port = ""
         self.__connection_string = f"mongodb://{username_password}{database_infos['HOST']}{port}"
 
-    def connect_to_bd(self):
+    def connect_to_db(self):
         self.client = MongoClient(self.__connection_string)
         self.database = self.client.get_database(database_infos["DB_NAME"])
 

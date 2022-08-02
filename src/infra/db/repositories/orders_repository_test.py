@@ -2,7 +2,7 @@ from src.infra.db.settings import db_connection_handler
 from .orders_repository import OrdersRepository
 
 
-db_connection_handler.connect_to_bd()
+db_connection_handler.connect_to_db()
 
 
 def test_register_order():
