@@ -6,9 +6,7 @@ from .order_register_controller import OrderRegisterController
 class HttpRequestMock():
     def __init__(self) -> None:
         self.body = {
-            "data": {
-                "some_variable": "some_data"
-            }
+            "some_variable": "some_data"
         }
 
 
@@ -19,7 +17,7 @@ def test_handler():
 
     response = order_register_controller.handle(http_request_mock)
 
-    assert use_case.register_order_attributes["data"] == http_request_mock.body["data"]
+    assert use_case.register_order_attributes["data"] == http_request_mock.body
 
     assert isinstance(response, HttpResponse)
     assert response.status_code == 200

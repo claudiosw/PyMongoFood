@@ -10,7 +10,7 @@ class OrderRegisterController(ControllerInterface):
         self.__use_case = use_case
 
     def handle(self, http_request: Type[HttpRequest]) -> Type[HttpResponse]:
-        data = http_request.body["data"]
+        data = http_request.body
         response = self.__use_case.register_order(data)
 
         return HttpResponse(

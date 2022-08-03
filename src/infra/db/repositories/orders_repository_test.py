@@ -26,7 +26,9 @@ def test_register_order():
     }
     database = db_connection_handler
     collection = database.get_collection('order')
+    collection.delete_one({"_id": "test"})
+    collection = database.get_collection('order')
     orders_repository.register_order(fake_registry)
-    order = collection.find_one({"client": "Joseph Test"})
-    collection.delete_one({"client": "Joseph Test"})
+    order = collection.find_one({"_id": "test"})
+    collection.delete_one({"_id": "test"})
     assert order == fake_registry
