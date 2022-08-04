@@ -10,4 +10,4 @@ class OrdersRepository(OrdersRepositoryInterface):
         database = db_connection_handler
         collection = database.get_collection('order')
         new_order = collection.insert_one(data)
-        return str(new_order)
+        return str(new_order.inserted_id)
