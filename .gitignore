@@ -5,3 +5,4 @@ storage.db
 
 # VS Code
 .vscode/
+.env
