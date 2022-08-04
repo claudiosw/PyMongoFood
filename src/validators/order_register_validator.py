@@ -11,6 +11,7 @@ def order_register_validator(request: Type[HttpRequest]):
         "address": {"type": "string", "required": False, "empty": True},
         "items": {
             "type": "list",
+            "required": True,
             "schema": {
                 "type": "dict",
                 "schema": {
